@@ -77,5 +77,86 @@
      if ($this->_db_handler)
          mysqli_close($this->_db_handler);
  }
+ public function save($new_values) {
+     if (is_array($new_values)) {
+         $table = $this->_table;
+         $sql1 = "insert into `$table` (";
+         $sql2 = " values (";
+         foreach ($new_values as $key => $value) {
+             $sql1 .= "`$key` ,";
+             if (is_numeric($value))
+                 $sql2 .= " $value ,";
+             else
+                 $sql2 .= " '" . $value . "' ,";
+         }
+         $sql1 = $sql1 . ") ";
+         $sql2 = $sql2 . ") ";
+         $sql1 = str_replace(",)", ")", $sql1);
+         $sql2 = str_replace(",)", ")", $sql2);
+         $sql = $sql1 . $sql2;
+
+     
+         if (mysqli_query($this->_db_handler, $sql)) {
+             $this->disconnect();
+             return true;
+         } else {
+             $this->disconnect();
+             return false;
+         }
+     }
+ }
+
+ public function update($edited_values, $id) {
+    $table = $this->_table;
+    $primary_key = $this->_primary_key;
+    $sql = "update  `" . $table . "` set  ";
+    foreach ($edited_values as $key => $value) {
+        if ($key != $primary_key) {
+            if (!is_numeric($value))
+                $sql .= " `$key` = '$value'  ,";
+            else
+                $sql .= " `$key` = $value ,";
+        }
+    }
+
+    $sql .= "where `" . $primary_key . "` = $id";
+    $sql = str_replace(",where", "where", $sql);
+
+   
+    if (mysqli_query($this->_db_handler, $sql)) {
+        $this->disconnect();
+        return true;
+    } else {
+        $this->disconnect();
+        return false;
+    }
+   
+}
+
+public function search($column, $column_value,$column2, $column2_value){
+    $table = $this->_table;
+    $sql = "SELECT * FROM `$table` WHERE `$column` = '$column_value' OR `$column2` = '$column2_value'";
+    return $this->getResult($sql);
+}
+
+
+ public function delete($id) {
+    $table = $this->_table;
+    var_dump($id);
+   $primary_key =$this->_primary_key;
+
+   $sql = "DELETE FROM `" . $table . "` WHERE `" . $primary_key . "` = " . $id;
+
+  
+    if (mysqli_query($this->_db_handler, $sql)) {
+        $this->disconnect();
+        return true;
+    } else {
+        $this->disconnect();
+        return false;
+    }
+    
+}
+
 
    }
