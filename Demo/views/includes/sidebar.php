@@ -76,7 +76,7 @@
 
         <!-- chartss menu -->
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="../../../../Article_PHP_Project/Demo/views/charts/chart.php" class="nav-link">
           <img src="../../assets/dist/img/bar-graph.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
             <p style="font-size: 18px; margin-left: 6px; color:white">
               Charts
