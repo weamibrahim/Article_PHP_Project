@@ -24,7 +24,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
             'user_name' => $user_name,
             'user_email' => $user_email
         ];
-
+        //Remember me
         if(isset($_POST['remember_me'])){
             setcookie('email', $_POST['email'], time() + (86400 * 30), "/"); 
             setcookie('password', $_POST['password'], time() + (86400 * 30), "/");
