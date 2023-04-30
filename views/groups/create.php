@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
   if (!empty($_FILES)) {
     //var_dump($_FILES);
     $file_name = $_FILES['icon']["name"];
-    move_uploaded_file($image, "../../uploads/$file_name");
+    move_uploaded_file($image, "../../uploads/icon_groups/$file_name");
   }
   $name = $_POST['name'];
   $description = $_POST['description'];

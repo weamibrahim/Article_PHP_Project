@@ -39,7 +39,7 @@ $items = $db->get_all_record_paginated(array(), 0);
         <td>' . $item["email"] . '</td>
      
  
-    <td>' . $item["groupid"] . '</td>
+  
     </tr>';}
       }
       ?>

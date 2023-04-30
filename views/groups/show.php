@@ -31,7 +31,7 @@ $items = $db->get_all_record_paginated(array(), 0);
 
       foreach ($items as $item) {
         echo '<tr><td>' . $item["id"] . '</td>
-   <td ><img  style ="wigth:20px;height:20px;"src="../../uploads/'. $item["icon"]. ' "></td>
+   <td ><img  style ="wigth:20px;height:20px;"src="../../uploads/image_articles'. $item["icon"]. ' "></td>
 
   <td> <a  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
     <td>' . $item["description"] . '</td>
