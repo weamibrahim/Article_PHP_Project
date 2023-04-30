@@ -44,16 +44,16 @@ if(isset($_GET["group"])&&!isset($_GET["delete"])){
     elseif(isset($_GET["article"])&&!isset($_GET["delete"])){
         if($_GET["article"]==intval($_GET["article"])){
         
-                 require_once("views/Articles/ArticlesEdit.php");
+                // require_once("views/Articles/ArticlesEdit.php");
              }
              elseif(($_GET["article"])=='delete'){
-                 require_once("views/Articles/ArticlesDelete.php"); 
+                 require_once("views/Articles/delete.php"); 
              }
                else if(($_GET["article"])=='add'){
-                require_once("views/Articles/ArticlesCreate.php");
+                require_once("views/Articles/create.php");
             }
              else{
-                 require_once("views/Articles/ArticlesView.php"); 
+                 require_once("views/Articles/show.php"); 
              }
          }
 ?> 
