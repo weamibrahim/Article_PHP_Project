@@ -28,9 +28,8 @@
 - Clone this repo to your local machine using `https://github.com/weamibrahim/Article_PHP_Project`
 
 ## Our Team
-
-
-| <a href="https://github.com/Viola-George" target="_blank">**Viola George**</a> | <a href="https://github.com/Viola-George" target="_blank">**Weam Ibrahim**</a> | <a href="https://github.com/Viola-George" target="_blank">**Donia Ahmed**</a> |
-| :---: |:---:| :---:|
-
-| <a href="https://github.com/Viola-George" target="_blank">`https://github.com/Viola-George`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
+- <a href="https://github.com/weamibrahim" target="_blank">**Weam Ibrahim**</a>  <br>
+- <a href="https://github.com/Viola-George" target="_blank">**Viola George**</a> <br>
+- <a href="https://github.com/DoniaAhmed20" target="_blank">**Donia Ahmed**</a> <br>
+- <a href="#" target="_blank">**Amed Orabi**</a>  <br>
+- <a href="#" target="_blank">**Mostafa**</a>
