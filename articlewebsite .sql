@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8111
--- Generation Time: Apr 30, 2023 at 12:59 PM
+-- Generation Time: Apr 30, 2023 at 07:06 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -41,7 +41,9 @@ CREATE TABLE `articles` (
 -- Dumping data for table `articles`
 --
 
-
+INSERT INTO `articles` (`id`, `title`, `summary`, `image`, `full_article`, `publishing_date`, `user_id`) VALUES
+(10, 'www', 'ssss', 'images (1).jpeg', 'uuuuuuu', '2023-04-13 22:00:00.000000', 4),
+(11, 'yyy', 'ssss', 'images (1).jpeg', 'uuuuuuu', '2023-04-10 22:00:00.000000', 4);
 
 -- --------------------------------------------------------
 
@@ -60,7 +62,11 @@ CREATE TABLE `groups` (
 -- Dumping data for table `groups`
 --
 
-I
+INSERT INTO `groups` (`id`, `icon`, `name`, `description`) VALUES
+(90, '65.jpg', 'wehgfghg', 'language'),
+(95, '14023_1.jpg', 'weam', 'bbb'),
+(96, 'bc38e39656508570a324dc915203f5ac (1).jpeg', 'after type', 'framr'),
+(99, 'images (1).jpeg', 'weam', 'framr');
 
 -- --------------------------------------------------------
 
@@ -74,7 +80,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `subscriptionDate` timestamp(6) NOT NULL DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6),
   `groupId` int(11) NOT NULL,
   `type` enum('user','admin','editor') NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -83,6 +88,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
+INSERT INTO `users` (`Id`, `userName`, `password`, `Email`, `name`, `groupId`, `type`) VALUES
+(1, ',jk', '8678778', 'nkjhjhghj', 'jkjhjg', 90, 'user'),
+(2, 'kj', '87867', '.lkjkjhkljl', '', 95, 'user'),
+(3, 'eeeeeeeeee', '3333333333333333333', 'rrrrrrrrrrrrrrrrrrr', 'rrrrrrrrrrrrrrrr', 90, 'admin'),
+(4, 'ughghvg', '3333333333333333', 'errrrrrrrrrrrrrrrr', 'frffff', 90, 'user'),
+(5, 'rrrr', '', '', 'fffffffffffffff', 96, 'user'),
+(7, 'e', '9878', 'mk', 'k', 99, 'user');
 
 --
 -- Indexes for dumped tables
@@ -116,19 +128,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `groups`
 --
 ALTER TABLE `groups`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

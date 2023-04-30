@@ -10,7 +10,7 @@ $db = new MySQLHandler("groups");
 if (isset($_POST['submit'])) {
 
   $image = $_FILES['icon']["tmp_name"];
-  //var_dump($image);
+  var_dump($image);
 
   if (!empty($_FILES)) {
     //var_dump($_FILES);

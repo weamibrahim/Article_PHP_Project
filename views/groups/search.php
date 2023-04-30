@@ -95,7 +95,7 @@ require_once("../../vendor/autoload.php");
 
                             <td><?php echo $result['id'] ?></td>
                             <!-- $result['icon'] -->
-                            <td><?php echo '<img  style ="wigth:20px;height:20px;"src="../../uploads/' . $result["icon"] . '">'; ?></td>
+                            <td><?php echo '<img  style ="wigth:20px;height:20px;"src="../../uploads/icon_groups' . $result["icon"] . '">'; ?></td>
                             <td><?php echo $result['name'] ?></td>
                             <td><?php echo $result['description'] ?></td>
 
