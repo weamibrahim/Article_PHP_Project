@@ -82,6 +82,10 @@ CREATE TABLE `users` (
 --
 -- Dumping data for table `users`
 --
+INSERT INTO `users` (`id`, `name`, `email`, `mobile_number`, `password`, `username`, `group_id`, `type`) VALUES
+(1, 'viola', 'viola@gmail.com', '0103539349', '123456', 'viola', 1, 'admin'),
+(2, 'martina', 'martina@gmail.com', '0123393721', '123456', 'martina', 2, 'editor'),
+(3, 'maryam', 'maryam@gmail.com', '0123291029', '123456', 'maryam', 3, 'user');
 
 
 --

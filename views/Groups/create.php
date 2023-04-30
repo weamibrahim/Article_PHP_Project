@@ -30,7 +30,33 @@ if (isset($_POST['submit'])) {
   header('location:show.php');
 }
 
+if(isset($_POST['create'])) {
+  $icon = "<i><img src='../../images/group.png'style='width:2vw;height:4vh'></i>";
+$name = ($_POST['name']);
+$description = $_POST['description'];	
+$emptyInput = $_groups_sqlhandler->check_empty($_POST, array('name', 'description'));
 
+  if($emptyInput){
+      echo    '<h5 style="text-align:center; color:red; padding:2%">'
+                  .$emptyInput.
+              '</h5>';
+  }
+  
+else{
+  $array = array( 
+          // "icon" => "<i class='bi bi-people-fill fs-3'></i>",
+          
+    "name" => $name, 
+    "description" => $description	
+  ); 
+  $_groups_sqlhandler->insert($array);  	
+      ?>
+     <script>
+  window.location.href = "index.php";
+  </script>
+     <?php
+}  
+}
 ?>
 
 

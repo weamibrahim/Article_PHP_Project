@@ -67,3 +67,12 @@ if(isset($_GET["group"])&&!isset($_GET["delete"])){
 </body>
  
 </html>
+
+<?php 
+require_once("vendor/autoload.php");
+session_start();
+
+$dbHandler = new MySqlHandler('users');
+
+
+?>
