@@ -49,7 +49,17 @@
 
         return $this->getResult($sql);
 
+
     }
+    public function get_record_by_id($id) {
+
+     $primary_key = $this->_primary_key;
+
+     $table = $this->_table;
+     $sql = "select * from `$table` where `$primary_key` = '$id' ";
+
+     return $this->getResult($sql);
+ }
     private function getResult($sql)
     {
       if(__Debug_Mode__=== 1)

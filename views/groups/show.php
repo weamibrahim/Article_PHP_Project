@@ -21,7 +21,7 @@ $items = $db->get_all_record_paginated(array(), 0);
       <tr>
         <th scope="col">#</th>
         <th scope="col">icon</th>
-        <th scope="col">name</th>
+        <th scope="col"> name</th>
         <th scope="col">decription</th>
         <th scope="col">action</th>
       </tr>
@@ -33,7 +33,7 @@ $items = $db->get_all_record_paginated(array(), 0);
         echo '<tr><td>' . $item["id"] . '</td>
    <td ><img  style ="wigth:20px;height:20px;"src="../../uploads/'. $item["icon"]. ' "></td>
 
-  <td>' . $item["name"] . '</td>
+  <td> <a  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
     <td>' . $item["description"] . '</td>
      <td><button class="btn btn-secondary"><a  class="text-decoration-none text-black" href="update.php?updateId=' . $item["id"] . '" >update group</a></button>
    <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >delete group</a></button></td></tr>';

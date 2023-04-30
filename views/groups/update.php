@@ -8,7 +8,7 @@ require_once("../../vendor/autoload.php");
 $db = new MySQLHandler("groups");
 $id = $_GET['updateId'];
 $groups = $db->get_record_by_id($id);
-var_dump($groups[0]['icon']);
+//var_dump($groups[0]['icon']);
 if (isset($_POST['submit'])) {
 
 
