@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
   $full_article = $_POST['full_article'];
   $date = $_POST['date'];
   $user_id = $_POST['user_id'];
-  $type = $_POST['type'];
+ 
 
   $new_values = array(
    
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
   
     'publishing_date' =>  $date,
     'user_id' =>  $user_id,
-    'type' =>  $type,
+  
   );
   var_dump($new_values);
   $result = $db->save($new_values);
