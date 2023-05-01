@@ -1,9 +1,31 @@
 <?php
 session_start();
+
+require_once("../../vendor/autoload.php");
+
+//permission
+if(isset($_SESSION["logged"]) ==true) {
+  if ($_SESSION['type'] == 'admin') {
+      $sql = "SELECT a.*, u.name as user_name FROM articles a JOIN users u ON a.user_id = u.id";
+      $articles = $articles->getResults($sql);
+  } 
+  elseif($_SESSION['type'] == 'editor') {
+      $sql = "SELECT a.*,u.name as user_name
+      FROM articles a
+      JOIN users u ON a.user_id = u.id
+      WHERE u.group_id = 2";
+      $articles = $articles->getResults($sql);
+  }
+}
+else{
+  $_message = "you are not allowed to see this page" ;
+  header('Location: ../home/index.php? message='.urldecode($_message));
+  exit;
+}
+
 require_once('../includes/header.php');
 require_once('../includes/topbar.php');
 require_once('../includes/sidebar.php');
-require_once("../../vendor/autoload.php");
 ?>
 
 

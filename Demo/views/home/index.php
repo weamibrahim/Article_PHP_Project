@@ -15,7 +15,7 @@ include('../includes/sidebar.php');
     <!-- Content Header (Page header) -->
     <div class="content-header">
     <div class="col-md-12">
-        <script>
+        <!-- <script>
          
           swal.fire({
   icon: 'success',
@@ -24,13 +24,28 @@ include('../includes/sidebar.php');
 
 });
 
-        </script>
+        </script> -->
     </div>
 
     <div class="col-md-12">
         <?php 
             include('../../functions/message.php');
         ?>
+    </div>
+
+    <div class="col-md-12">
+    <?php
+$message = isset($_GET['message']) ? $_GET['message'] : "";
+// Display the message
+if ($message) {
+    echo '
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+    <strong>Hey!</strong>' . htmlentities($message) .'
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+    ';
+}
+?>
     </div>
 
 
