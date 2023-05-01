@@ -39,7 +39,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
             }
 
         $_SESSION["email"] = $email;
-        $_SESSION["login"] = "Hello".$user_name."Welcome back. Your last visit was on ".$last_visit.".";
+        $_SESSION["status"] = "your last visit on ".$last_visit ;
 
         header('Location: ../views/home/index.php');
     }

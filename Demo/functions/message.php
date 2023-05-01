@@ -1,3 +1,9 @@
+<html>
+    <head>
+    <script src="../../assets/dist/js/sweetalert.min.js"></script>
+    </head>
+</html>
+
 <?php
 
 if(isset($_SESSION['status']))
@@ -36,9 +42,9 @@ function myFunction() {
       );
 }
 </script> -->
-
-
-
+<?php
+echo $_SESSION['login'];
+?>
     <?php
     unset($_SESSION['login']);
     

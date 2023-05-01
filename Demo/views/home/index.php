@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (empty($_SESSION['auth'])) {
   $_SESSION['status'] = "You are not loggeed In";
   header('Location: ../login.php');
@@ -16,10 +15,24 @@ include('../includes/sidebar.php');
     <!-- Content Header (Page header) -->
     <div class="content-header">
     <div class="col-md-12">
+        <script>
+          <?php if ($_SESSION['auth']):?>
+          swal.fire({
+  icon: 'success',
+  title: 'Login Successful',
+  text: "Welcome",
+
+});
+<?php endif; ?>
+        </script>
+    </div>
+
+    <div class="col-md-12">
         <?php 
             include('../../functions/message.php');
         ?>
     </div>
+
 
 <div class="container mt-5">
       <!-- Main content -->
