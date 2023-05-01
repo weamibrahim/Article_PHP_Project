@@ -10,6 +10,110 @@ require_once('../includes/topbar.php');
   <!-- Content Header (Page header) -->
   <div class="content-header">
       <div class="container-fluid">
+        
+    <!-- Main content -->
+    <section class="content" style="margin-left: 230px;">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row" style="padding: 50px auto;">
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info" style="width: 290px">
+              <div class="inner">
+                <?php 
+                    require '../../config/dbcon.php';
+                    $query = "SELECT id FROM groups ORDER BY id";
+                    $query_row = mysqli_query($con , $query);
+                    $row = mysqli_num_rows($query_row);
+                    echo '<h1>'.$row.'</h1>';
+                ?>
+
+                <p>Groups</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning"  style="width: 290px">
+              <div class="inner">
+              <?php 
+                    require '../../config/dbcon.php';
+                    $query = "SELECT id FROM users ORDER BY id";
+                    $query_row = mysqli_query($con , $query);
+                    $row = mysqli_num_rows($query_row);
+                    echo '<h1>'.$row.'</h1>';
+                ?>
+
+                <p>Users</p>
+              </div>
+              <div class="icon">
+               
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger" style="width: 290px">
+              <div class="inner">
+              <?php 
+                    require '../../config/dbcon.php';
+                    $query = "SELECT id FROM articles ORDER BY id";
+                    $query_row = mysqli_query($con , $query);
+                    $row = mysqli_num_rows($query_row);
+                    echo '<h1>'.$row.'</h1>';
+                ?>
+
+                <p>Articles</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-group"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="row mb-2">
           
         <div style="padding-left:40px; background-color:#0C0C19; padding-top:20px; width: 850px">
@@ -70,6 +174,7 @@ $data = array(
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+  </div>
     <!-- /.content-header -->
 </div>
 
