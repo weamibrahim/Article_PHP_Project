@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($image, "../../uploads/image_articles/$file_name");
   }
   $full_article = $_POST['full_article'];
-  $date = $_POST['date'];
+  //$date = $_POST['date'];
   $user_id = $_POST['user_id'];
  
 
@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     'image' => $file_name,
     'full_article' =>  $full_article,
   
-    'publishing_date' =>  $date,
+    //'publishing_date' =>  $date,
     'user_id' =>  $user_id,
   
   );
@@ -69,12 +69,12 @@ if (isset($_POST['submit'])) {
       
       <input type="file" class="form-control border border-info border-start-0 rounded-end" required id="image" name="image">
 
-    </div>
-    <div class="mb-3 mx-5  ">
+     </div>
+   <!-- <div class="mb-3 mx-5  ">
       <label for="date" class="form-label">date</label>
       <input type="date"   class="form-control border border-info border-start-0 rounded-end" required id="desc" name="date">
 
-    </div>
+    </div> -->
     <div class="mb-3 mx-5  ">
       <label for="user_id" class="form-label">user_name</label>
       <select  class="form-control border border-info border-start-0 rounded-end" id="user_id" name="user_id">
