@@ -16,9 +16,8 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($image, "../../uploads/image_articles/$file_name");
   }
   $full_article = $_POST['full_article'];
-  $date = $_POST['date'];
   $user_id = $_POST['user_id'];
-  //$type = $_POST['type'];
+
 
   $new_values = array(
    
@@ -26,8 +25,6 @@ if (isset($_POST['submit'])) {
     'summary' =>  $summary,
     'image' => $file_name,
     'full_article' =>  $full_article,
-  
-    'publishing_date' =>  $date,
     'user_id' =>  $user_id,
   );
   $result = $db->save($new_values);
@@ -67,11 +64,6 @@ require_once('../includes/sidebar.php');
       <label for="image" class="form-label">Image</label>
       
       <input type="file" class="form-control  rounded-end" required  style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="image" name="image">
-
-    </div>
-    <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">
-      <label for="date" class="form-label">Date</label>
-      <input type="date"   class="form-control  rounded-end" required style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="desc" name="date">
 
     </div>
     <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">

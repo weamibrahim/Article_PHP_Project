@@ -43,7 +43,7 @@ $items = $db->get_all_record_paginated(array(), 0);
         echo '<tr><td>' . $item["id"] . '</td>
    <td ><img  style ="wigth:20px;height:20px;" src="../../uploads/'. $item["icon"]. ' "></td>
 
-  <td> <a  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
+  <td> <a class="text-decoration-none" style="color: #BC8CE9"  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
     <td>' . $item["description"] . '</td>
      <td><button class="btn " style="background-color:#D3B2B7"><a  class="text-decoration-none text-black" href="update.php?updateId=' . $item["id"] . '" >Update Group</a></button>
    <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >Delete Group</a></button></td></tr>';

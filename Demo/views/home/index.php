@@ -16,14 +16,14 @@ include('../includes/sidebar.php');
     <div class="content-header">
     <div class="col-md-12">
         <script>
-          <?php if ($_SESSION['auth']):?>
+         
           swal.fire({
   icon: 'success',
   title: 'Login Successful',
   text: "Welcome",
 
 });
-<?php endif; ?>
+
         </script>
     </div>
 
