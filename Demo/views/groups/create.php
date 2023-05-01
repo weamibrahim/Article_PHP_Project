@@ -1,6 +1,5 @@
 <?php
-include '../header.php';
-include '../footer.php';
+session_start();
 
 
 require_once("../../vendor/autoload.php");
@@ -10,7 +9,6 @@ $db = new MySQLHandler("groups");
 if (isset($_POST['submit'])) {
 
   $image = $_FILES['icon']["tmp_name"];
-  var_dump($image);
 
   if (!empty($_FILES)) {
     //var_dump($_FILES);
@@ -30,6 +28,11 @@ if (isset($_POST['submit'])) {
   header('location:show.php');
 }
 
+
+
+include('../includes/header.php');
+include('../includes/topbar.php');
+include('../includes/sidebar.php');
 
 ?>
 
@@ -56,3 +59,9 @@ if (isset($_POST['submit'])) {
       <button type="submit" class="btn btn-outline-info " name="submit">Submit</button>
     </div>
 </form>
+
+
+
+<?php
+require_once('../includes/footer.php');
+?>

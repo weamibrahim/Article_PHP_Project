@@ -1,28 +1,25 @@
 <?php
-include '../header.php';
-include '../footer.php';
-
-
+session_start();
 require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("users");
 
-if (isset($_POST['submit'])){ 
+if (isset($_POST['submit'])) {
 
 
-  
+
   $name = $_POST['name'];
-  $username= $_POST['username'];
+  $username = $_POST['username'];
   $email = $_POST['email'];
   $password = $_POST['password'];
- 
+
   $groupid = $_POST['groupid'];
-  $type= $_POST['type'];
-//var_dump($name);
+  $type = $_POST['type'];
+  //var_dump($name);
 
   $new_values = array(
-   
-    'userName' =>$username,
+
+    'userName' => $username,
     'password' => $password,
     'Email' => $email,
     'name' => $name,
@@ -33,68 +30,77 @@ if (isset($_POST['submit'])){
 
   );
   $result = $db->save($new_values);
- header('location:user_show.php');
+  header('location:user_show.php');
 }
-//var_dump($new_values);
- 
 
 
-
-
+include('../includes/header.php');
 ?>
 
 
 
-<form class=" mt-5 " method="post" class="container" enctype="multipart/form-data">
-  <div class="shadow p-3 mb-5 bg-body-tertiary rounded-4  container bg-info-subtle bg-opacity-50">
-    <p class="text-center fs-1 fst-italic"> Register user</p>
+<div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <!-- <div class="container-fluid"> -->
+    <form class=" mt-5 " method="post" class="container" enctype="multipart/form-data">
+      <div class="shadow p-3 mb-5  rounded-4  container ">
+        <p class="text-center fs-1 fst-italic" style="color: #BC8CE9; text-shadow: 1px 2px #A8BBC9; margin-top: -50px"> Register user</p>
 
-    <div class="mb-3 mx-5  mt-5 ">
-      <label for="name" class="form-label">name</label>
-      <input type="text" class="form-control border border-info border-start-0 rounded-end" required id="name" name="name">
-    </div>
+        <div class="mb-3 mx-5  mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control  rounded-end" required style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="name" name="name">
+        </div>
 
-    <div class="mb-3 mx-5  ">
-      <label for="username" class="form-label">username</label>
-      <input type="text" class="form-control border border-info border-start-0 rounded-end" required id="username" name="username">
-    </div>
-    <div class="mb-3 mx-5  ">
-      <label for="email" class="form-label">email</label>
-      <input type= "email" class="form-control border border-info border-start-0 rounded-end" required id="email" name="email">
-    </div>
+        <div class="mb-3 mx-5 mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="username" class="form-label">User Name</label>
+          <input type="text" class="form-control  rounded-end" required style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="username" name="username">
+        </div>
+        <div class="mb-3 mx-5 mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control border  rounded-end" required style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="email" name="email">
+        </div>
 
-    <div class="mb-3 mx-5  ">
-      <label for="password" class="form-label">password</label>
-      <input type= "password" class="form-control border border-info border-start-0 rounded-end" required id="password" name="password">
-    </div>
+        <div class="mb-3 mx-5 mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control  rounded-end" required id="password" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" name="password">
+        </div>
 
-   
-   
-    <div class="mb-3 mx-5  ">
-      <label for="user_id" class="form-label">group_name</label>
-      <select  class="form-control border border-info border-start-0 rounded-end" id="user_id" name="groupid">
 
-      <?php 
-      $dbs = new MySQLHandler("groups");
-      $groups = $dbs->get_all_record_paginated(array(), 0);
-      foreach($groups as $group){
-        echo '<option value="'.$group['id'].'">'.$group['name'].'</option>';
-      }
-      ?>
-      </select>
-    
 
-    </div>
-  
-    <div class="mb-3 mx-5  ">
-      <label for="type" class="form-label">type</label>
-      <select id="type" class="form-control border border-info border-start-0 rounded-end" name="type">
-        <option value="admin">admin</option>
-        <option value="user">user</option>
-        <option value="editor">editor</option></select>
-    </div>
+        <div class="mb-3 mx-5 mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="user_id" class="form-label">Group Name</label>
+          <select class="form-control  rounded-end" id="user_id" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" name="groupid">
 
-    <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-outline-info " name="submit">Submit</button>
-    </div>
-</form>
+            <?php
+            $dbs = new MySQLHandler("groups");
+            $groups = $dbs->get_all_record_paginated(array(), 0);
+            foreach ($groups as $group) {
+              echo '<option value="' . $group['id'] . '">' . $group['name'] . '</option>';
+            }
+            ?>
+          </select>
+
+
+        </div>
+
+        <div class="mb-3 mx-5 mt-3 " style="color: #BC8CE9; font-size: 20px; margin-top: -30px">
+          <label for="type" class="form-label">Type</label>
+          <select id="type" class="form-control  rounded-end" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" name="type">
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+            <option value="editor">editor</option>
+          </select>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-outline-info " name="submit" style="background-color: #B988E9; border-color: #B988E9; color:white" >Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<?php
+require_once('../includes/footer.php');
+?>

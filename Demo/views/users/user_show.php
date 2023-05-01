@@ -12,11 +12,11 @@ $items = $db->get_all_record_paginated(array(), 0);
 <div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
     <!-- Content Header (Page header) -->
     <div class="content-header">
-      <div class="container-fluid">
+     
 
 <div class="container">
   <div class="d-flex justify-content-left">
-  <button class=" btn btn-info mt-5"  style="background-color: #8487C0; border-color: #8487C0; "><a class="text-decoration-none text-white"   href="./user_create.php">New User</a></button>
+  <button class=" btn btn-info mt-5 ms-1"  style="background-color: #8487C0; border-color: #8487C0; "><a class="text-decoration-none text-white"   href="./user_create.php">New User</a></button>
   <button class="btn btn-success mt-5  ms-2"  style="background-color: #A3BCCC; border-color: #A3BCCC; "><a  class="text-decoration-none text-white" href="./user_search.php">Search User</a></button>
   </div>
   <table class="table mt-5" style="color: white;">
@@ -59,12 +59,10 @@ foreach($groups as $group) {
      <button class="btn btn-danger"><a class="text-decoration-none text-black"  class="text-decoration-non text-black" href="user_delete.php?deleteId=' . $item["id"] . '" >Delete User</a></button></td></tr>';
     }
       ?>
-
-
     </tbody>
   </table>
 </div>
-      </div>
+      
     </div>
 </div>
 

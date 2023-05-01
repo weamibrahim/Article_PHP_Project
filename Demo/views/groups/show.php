@@ -1,20 +1,21 @@
 <?php
-include '../header.php';
-include '../footer.php';
+session_start();
+include('../includes/header.php');
+include('../includes/topbar.php');
+include('../includes/sidebar.php');
 require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("groups");
 $items = $db->get_all_record_paginated(array(), 0);
 
-//var_dump($items)
 ?>
 
 
 
 <div class="container">
   <div class="d-flex ">
-  <button class=" btn btn-info mt-5  "><a   class="text-decoration-none text-black " href="./create.php">creat group</a></button>
-  <button class="btn btn-success mt-5 ms-2"><a  class="text-decoration-none text-black " href="./search.php">search group</a></button>
+  <button class=" btn btn-info mt-5  " style="margin-left: 600px;"><a   class="text-decoration-none text-black " href="./create.php">creat group</a></button>
+  <button class="btn btn-success mt-5 " ><a  class="text-decoration-none text-black " href="./search.php">search group</a></button>
   </div>
   <table class="table   mt-5 ">
     <thead class="table-dark text-center">
@@ -46,3 +47,9 @@ $items = $db->get_all_record_paginated(array(), 0);
     </tbody>
   </table>
 </div>
+
+
+
+<?php
+require_once('../includes/footer.php');
+?>

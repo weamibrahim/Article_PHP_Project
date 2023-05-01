@@ -1,8 +1,5 @@
 <?php
 session_start();
-include('../includes/header.php');
-require_once('../includes/topbar.php');
-require_once('../includes/sidebar.php');
 require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("articles");
@@ -13,10 +10,8 @@ if (isset($_POST['submit'])) {
   $title = $_POST['title'];
   $summary = $_POST['summary'];
   $image = $_FILES['image']["tmp_name"];
-  //var_dump($image);
 
   if (!empty($_FILES)) {
-    //var_dump($_FILES);
     $file_name = $_FILES['image']["name"];
     move_uploaded_file($image, "../../uploads/image_articles/$file_name");
   }
@@ -38,10 +33,12 @@ if (isset($_POST['submit'])) {
   //var_dump($new_values);
   $result = $db->save($new_values);
   //var_dump($result);
- //header('location:show.php');
+  header('location:show.php');
 }
 
-
+include('../includes/header.php');
+require_once('../includes/topbar.php');
+require_once('../includes/sidebar.php');
 ?>
 
 
@@ -96,7 +93,7 @@ if (isset($_POST['submit'])) {
   
 
     <div class="d-flex justify-content-center">
-      <button type="submit" class="btn btn-outline-info " name="submit" style="background-color: #B988E9; border-color: #B988E9; color:white" ><a href="./show.php" style="text-decoration: none; color: white;">Submit</a>
+      <button type="submit" class="btn btn-outline-info " name="submit" style="background-color: #B988E9; border-color: #B988E9; color:white" >Submit
     </button>
     </div>
 </form> 
