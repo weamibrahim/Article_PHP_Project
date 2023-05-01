@@ -8,18 +8,23 @@ require_once('../includes/topbar.php');
 
 <div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
   <!-- Content Header (Page header) -->
-  <div class="content-header">
+  <div class="content-header" >
       <div class="container-fluid">
         
     <!-- Main content -->
-    <section class="content" style="margin-left: 230px;">
-      <div class="container-fluid">
+    <section class="content" >
+      <div class="container-fluid" style=" color: white;">
         <!-- Small boxes (Stat box) -->
-        <div class="row" style="padding: 50px auto;">
-          <div class="col-lg-3 col-6">
+        <div class="row">
+        <div class="col-lg-1 "></div>
+          <div class="col-lg-3 ">
             <!-- small box -->
-            <div class="small-box bg-info" style="width: 290px">
+            <div class="small-box" style="width: 290px; background-color: rgba(1, 0, 1, 0.1); border: 1px solid blueviolet;">
               <div class="inner">
+              <h2>Groups</h2>
+              <div class="icon mt-1" style="display: inline;">
+                <i><img src="../../assets/dist/img/people (2).png" width="50px" alt="group"></i>
+            </div>
                 <?php 
                     require '../../config/dbcon.php';
                     $query = "SELECT id FROM groups ORDER BY id";
@@ -28,19 +33,19 @@ require_once('../includes/topbar.php');
                     echo '<h1>'.$row.'</h1>';
                 ?>
 
-                <p>Groups</p>
               </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3">
             <!-- small box -->
-            <div class="small-box bg-warning"  style="width: 290px">
+            <div class="small-box "  style="width: 290px; background-color: rgba(1, 0, 1, 0.1); border: 1px solid blueviolet;">
               <div class="inner">
+              <h2>Users</h2>
+              <div class="icon mt-1" style="display: inline;">
+                <i><img src="../../assets/dist/img/user.png" width="40px" alt="group"></i>
+            </div>
               <?php 
                     require '../../config/dbcon.php';
                     $query = "SELECT id FROM users ORDER BY id";
@@ -49,19 +54,20 @@ require_once('../includes/topbar.php');
                     echo '<h1>'.$row.'</h1>';
                 ?>
 
-                <p>Users</p>
               </div>
-              <div class="icon">
-               
-              </div>
+
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3">
             <!-- small box -->
-            <div class="small-box bg-danger" style="width: 290px">
+            <div class="small-box" style="width: 290px; background-color: rgba(1, 0, 1, 0.1); border: 1px solid blueviolet;">
               <div class="inner">
+              <h2>Articles</h2>
+              <div class="icon mt-1" style="display: inline;">
+                <i><img src="../../assets/dist/img/content-writing.png" width="40px" alt="group"></i>
+            </div>
               <?php 
                     require '../../config/dbcon.php';
                     $query = "SELECT id FROM articles ORDER BY id";
@@ -69,58 +75,27 @@ require_once('../includes/topbar.php');
                     $row = mysqli_num_rows($query_row);
                     echo '<h1>'.$row.'</h1>';
                 ?>
-
-                <p>Articles</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-group"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
         </div>
+        <br>
         <!-- /.row -->
         <!-- Main row -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="row mb-2">
+                                          <!-- chart -->
+        <div class="row mb-2" style="margin-left: 150px;">
           
         <div style="padding-left:40px; background-color:#0C0C19; padding-top:20px; width: 850px">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     
-    <canvas id="myChart" width="60" height="40"></canvas>
+    <canvas id="myChart" width="60" height="30"></canvas>
     <?php
 include('../../config/dbcon.php');
 $sql = "SELECT g.name, COUNT(u.id) as num_users, u.type as type
@@ -177,7 +152,6 @@ $data = array(
   </div>
     <!-- /.content-header -->
 </div>
-
 
   
 <?php
