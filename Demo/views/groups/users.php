@@ -1,6 +1,7 @@
 <?php
-include '../header.php';
-include '../footer.php';
+session_start();
+include '../includes/header.php';
+include('../includes/topbar.php');
 require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("users");
@@ -14,21 +15,24 @@ $items = $db->get_all_record_paginated(array(), 0);
 
 
 
+<div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
 <div class="container">
 
   <div class="d-flex ">
 
   </div>
-  <table class="table table-striped  mt-5 ">
+  <table class="table  mt-5 ">
     <thead class="table-dark text-center">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">username</th>
-        <th scope="col">email</th>
+        <th scope="col" style="background-color: #BC8CE9">#</th>
+        <th scope="col" style="background-color: #BC8CE9">User Name</th>
+        <th scope="col" style="background-color: #BC8CE9">Email</th>
        
       </tr>
     </thead>
-    <tbody class="text-center">
+    <tbody class="text-center"  style="color: white;">
       <?php
 
       foreach ($items as $item) {
@@ -50,3 +54,11 @@ $items = $db->get_all_record_paginated(array(), 0);
     </tbody>
   </table>
 </div>
+  </div>
+</div>
+
+  
+<?php
+include('../includes/sidebar.php');
+require_once('../includes/footer.php');
+?>

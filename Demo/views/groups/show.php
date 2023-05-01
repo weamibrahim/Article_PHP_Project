@@ -12,19 +12,23 @@ $items = $db->get_all_record_paginated(array(), 0);
 
 
 
+<div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+ 
 <div class="container">
   <div class="d-flex ">
-  <button class=" btn btn-info mt-5  " style="margin-left: 600px;"><a   class="text-decoration-none text-black " href="./create.php">creat group</a></button>
-  <button class="btn btn-success mt-5 " ><a  class="text-decoration-none text-black " href="./search.php">search group</a></button>
+  <button class=" btn btn-info mt-5 ms-1"  style="background-color: #8487C0; border-color: #8487C0; "><a   class="text-decoration-none text-black " href="./create.php">New Group</a></button>
+  <button class="btn btn-success mt-5 ms-2" style="background-color: #A3BCCC; border-color: #A3BCCC; " ><a  class="text-decoration-none text-black " href="./search.php">Search Group</a></button>
   </div>
-  <table class="table   mt-5 ">
+  <table class="table   mt-5 " style="color: white;">
     <thead class="table-dark text-center">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">icon</th>
-        <th scope="col"> name</th>
-        <th scope="col">decription</th>
-        <th scope="col">action</th>
+        <th scope="col" style="background-color: #BC8CE9">#</th>
+        <th scope="col" style="background-color: #BC8CE9">icon</th>
+        <th scope="col" style="background-color: #BC8CE9"> name</th>
+        <th scope="col" style="background-color: #BC8CE9">decription</th>
+        <th scope="col" style="background-color: #BC8CE9">action</th>
       </tr>
     </thead>
     <tbody class="text-center">
@@ -36,8 +40,8 @@ $items = $db->get_all_record_paginated(array(), 0);
 
   <td> <a  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
     <td>' . $item["description"] . '</td>
-     <td><button class="btn btn-secondary"><a  class="text-decoration-none text-black" href="update.php?updateId=' . $item["id"] . '" >update group</a></button>
-   <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >delete group</a></button></td></tr>';
+     <td><button class="btn " style="background-color:#D3B2B7"><a  class="text-decoration-none text-black" href="update.php?updateId=' . $item["id"] . '" >Update Group</a></button>
+   <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >Delete Group</a></button></td></tr>';
       }
       ?>
 
@@ -46,6 +50,8 @@ $items = $db->get_all_record_paginated(array(), 0);
 
     </tbody>
   </table>
+</div>
+    </div>
 </div>
 
 
