@@ -25,10 +25,10 @@ include('../includes/sidebar.php');
       <!-- Main content -->
     <h1 style="color: #BC8CE9; text-shadow: 1px 2px #A8BBC9; margin-left:300px; font-size: 40px">Lets write about our passions!</h1><br><br>
     <p style="color: white; margin-left:150px; font-size: 22px;line-height: 45px;">Your Articles offers high quality articles submitted by experts and talented writers on different topics.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Submit & Publish your best articles for free. Free article directory and free article submissi...</p><br><br>
-    <img src="../../assets/dist/img/22 (1).png" style="margin-left: 340px; margin-top: -90px;">
+    <!-- <img src="../../assets/dist/img/22 (1).png" style="margin-left: 340px; margin-top: -90px;"> -->
     <br>
     <a href="../articles/show.php">
-      <button style="background-color: rgba(100,0,100,0.5); color:white; padding: 20px; border: 1px solid #4D1781; margin-left: 490px; margin-top:20px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 18px;">Enjoy your Experience</button>
+      <button style="background-color: rgba(100,0,100,0.5); color:white; padding: 20px; border: 1px solid #4D1781; margin-left: 490px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); font-size: 18px;">Enjoy your Experience</button>
     </a>
       
     </div>
