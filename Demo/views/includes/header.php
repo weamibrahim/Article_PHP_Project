@@ -37,7 +37,7 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <script src="../../assets/js/plugins/sweetalert.min.js"></script>
-<script src="../../assets/dist/js/sweetalert.min.js"></script>
+<!-- <script src="../../assets/dist/js/sweetalert.min.js"></script>
 <script>
   swal({
   title: "Good job!",
@@ -45,7 +45,7 @@
   icon: "success",
   button: "Aww yiss!",
 });
-</script>
+</script> -->
 
 <!-- crude -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">

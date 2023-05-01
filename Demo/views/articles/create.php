@@ -30,9 +30,8 @@ if (isset($_POST['submit'])) {
     'publishing_date' =>  $date,
     'user_id' =>  $user_id,
   );
-  //var_dump($new_values);
   $result = $db->save($new_values);
-  //var_dump($result);
+  $_SESSION['status'] = "Created Successfully";
   header('location:show.php');
 }
 

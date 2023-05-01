@@ -30,11 +30,12 @@ if (isset($_POST['submit'])) {
 
   );
   $result = $db->save($new_values);
+  $_SESSION['status'] = "Created Successfully";
   header('location:user_show.php');
 }
-
-
+include('../includes/sidebar.php');
 include('../includes/header.php');
+include('../includes/topbar.php');
 ?>
 
 
@@ -94,7 +95,7 @@ include('../includes/header.php');
         </div>
 
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-outline-info " name="submit" style="background-color: #B988E9; border-color: #B988E9; color:white" >Submit</button>
+          <button type="submit" class="btn " name="submit" style="background-color: #B988E9; border-color: #B988E9; color:white" >Submit</button>
         </div>
       </div>
     </form>

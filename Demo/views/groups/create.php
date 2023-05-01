@@ -23,8 +23,8 @@ if (isset($_POST['submit'])) {
     'name' =>  $name,
     'description' => $description
   );
-  // var_dump($new_values);
   $result = $db->save($new_values);
+  $_SESSION['status'] = "Created Successfully";
   header('location:show.php');
 }
 
