@@ -1,23 +1,21 @@
 <?php
-
+session_start();
 require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("groups");
 
 if(isset($_GET['deleteId'])){
     $id=$_GET['deleteId'];
-  //var_dump($id);
     $result =$db->delete($id);
-     var_dump($result);
 if($result){
-   // echo"sucess";
+  $_SESSION['status'] = "Deleted Successfully";
    header('location:show.php');
 }
-else{ 
-  $_SESSION['status'] = "Access Denied";
-}
    
-
+else{ 
+  $_SESSION['status'] = "Cannot delete: the group has transactions";
+  header('location:show.php');
+}
  }
  
 

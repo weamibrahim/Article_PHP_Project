@@ -10,6 +10,11 @@ require_once("../../vendor/autoload.php");
 <div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
     <!-- Content Header (Page header) -->
     <div class="content-header">
+    <div class="col-md-12">
+        <?php 
+            include('../../functions/message.php');
+        ?>
+    </div>
       <div class="container-fluid">
 <div class="container">
   <div class="d-flex ">

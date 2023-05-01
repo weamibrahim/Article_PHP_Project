@@ -1,5 +1,4 @@
 <?php
-
  class MySQLHandler implements DbHandler{
 
 
@@ -152,7 +151,6 @@ public function search($column, $column_value,$column2, $column2_value){
 
  public function delete($id) {
     $table = $this->_table;
-    var_dump($id);
    $primary_key =$this->_primary_key;
 
    $sql = "DELETE FROM `" . $table . "` WHERE `" . $primary_key . "` = " . $id;
