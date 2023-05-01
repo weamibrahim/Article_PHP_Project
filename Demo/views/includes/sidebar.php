@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #744CA4;">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
     <!-- Brand Logo -->
     <a href="../../../../Article_PHP_Project/Demo/views/home/index.php" class="brand-link"  style="text-decoration: none;">
       <img src="../../assets/dist/img/article.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -44,7 +44,7 @@
         </li>
     <!-- groups menu -->
         <li class="nav-item">
-          <a href="../../../../Article_PHP_Project/Demo/views/groups/group.php" class="nav-link">
+          <a href="../../../../Article_PHP_Project/Demo/views/groups/show.php" class="nav-link">
           <img src="../../assets/dist/img/user-group.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
             <p style="font-size: 18px; margin-left: 6px; color:white">
               Groups
@@ -54,7 +54,7 @@
 
     <!-- users menu -->
         <li class="nav-item">
-          <a href="../../../../Article_PHP_Project/Demo/views/users/user.php" class="nav-link">
+          <a href="../../../../Article_PHP_Project/Demo/views/users/user_show.php" class="nav-link">
           <img src="../../assets/dist/img/user.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
             <p style="font-size: 18px; margin-left: 6px; color:white">
               Users
@@ -65,7 +65,7 @@
 
         <!-- articles menu -->
         <li class="nav-item">
-          <a href="../../../../Article_PHP_Project/Demo/views/articles/article.php" class="nav-link">
+          <a href="../../../../Article_PHP_Project/Demo/views/articles/show.php" class="nav-link">
           <img src="../../assets/dist/img/content-writing.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
             <p style="font-size: 18px; margin-left: 6px; color:white">
               Articles

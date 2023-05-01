@@ -1,33 +1,49 @@
 <?php
+
 if(isset($_SESSION['status']))
 {
     ?>
-    <!-- <div class="alter alter-warning alter-dismissible fade show" role="alter">
-        <strong>Hey!</strong> 
-        
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div> -->
 
     <div class="alert alert-info alert-dismissible fade show" role="alert">
   <strong>Hey!</strong> <?php echo $_SESSION['status'] ?>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<!-- <script>
-        swal({
-title: "rgr",
-text: "You clicked the button!",
-icon: "success",
-});
-
-     </script> -->
-
 
 
     <?php
     unset($_SESSION['status']);
-    //unset($_SESSION['login']);
+}
+
+if(isset($_SESSION['login']))
+{
+    ?>
+
+<!-- 
+<div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>me!</strong> <?php //echo $_SESSION['login'] ?>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> -->
+<!-- <script>alert("Welcome to Geeks for Geeks")</script>; -->
+<!-- <div class="w3-panel w3-green">
+  <h3>Success!</h3>
+  <p>Your action was successful.</p>
+</div> -->
+<!-- <script>
+function myFunction() {
+  alert( <?php 
+                      //include('../functions/message.php');
+        ?>
+      );
+}
+</script> -->
+
+
+
+    <?php
+    unset($_SESSION['login']);
+    
+    
 }
 
 ?>
+

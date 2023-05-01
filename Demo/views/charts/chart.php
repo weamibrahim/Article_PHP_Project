@@ -3,11 +3,20 @@ session_start();
 require_once('../includes/header.php');
 require_once('../includes/sidebar.php');
 ?>
-<div style="height: 656px; width:1536px; padding-left:550px; background-color:#0C0C19; padding-top:20px; padding-bottom:20px">
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          
+        <div style="padding-left:40px; background-color:#0C0C19; padding-top:20px; width: 850px">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     
-    <canvas id="myChart" width="70" height="70"></canvas>
+    <canvas id="myChart" width="60" height="40"></canvas>
     <?php
 include('../../config/dbcon.php');
 $sql = "SELECT g.name, COUNT(u.id) as num_users 
@@ -58,6 +67,12 @@ $data = array(
     });
     </script>
 </div>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+</div>
+
   
 <?php
 include('../includes/footer.php');

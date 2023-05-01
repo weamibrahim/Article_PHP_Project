@@ -12,7 +12,11 @@ include('../includes/header.php');
 include('../includes/sidebar.php');
 ?>
 
-
+<div class="col-md-12">
+                    <?php 
+                      include('../../functions/message.php');
+                    ?>
+                  </div>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper" style="margin-top: -24px; margin-left: 0px; height: 680px; width:1536px;">
     <!-- Content Header (Page header) -->

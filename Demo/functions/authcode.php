@@ -7,6 +7,10 @@ if(isset($_POST['email']) && isset($_POST['password']))
     $email =  $_POST['email'];
     $password = $_POST['password'];
 
+    //date of visiting
+    $_SESSION['last_visit'] = date('Y-m-d H:i:s');
+    $last_visit = $_SESSION['last_visit'];
+
     $log_query = "select * FROM users WHERE Email='$email' AND password='$password'";
     $log_query_run = mysqli_query($con,$log_query);
 
@@ -35,7 +39,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
             }
 
         $_SESSION["email"] = $email;
-        $_SESSION['status'] = "Logged in Sucessfully";
+        $_SESSION["login"] = "Hello".$user_name."Welcome back. Your last visit was on ".$last_visit.".";
 
         header('Location: ../views/home/index.php');
     }
