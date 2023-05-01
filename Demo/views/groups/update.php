@@ -19,8 +19,6 @@ if (isset($_POST['submit'])) {
     move_uploaded_file($image, "../../uploads/$file_name");
   
 
-  //var_dump($name);
-
   $edited_values = array(
     'icon' => $file_name,
     'name' =>  $name,
@@ -28,15 +26,13 @@ if (isset($_POST['submit'])) {
   );
   }
   else {
-    // user did not upload a new icon, so use the old one
     $edited_values = array(
         'name' => $name,
         'description' => $description
     );
 }
-  // var_dump($new_values);
   $result = $db->update($edited_values, $id);
-  //var_dump($result);
+  $_SESSION['status'] = "Updated Successfully";
   header('location:show.php');
 }
 

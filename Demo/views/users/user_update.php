@@ -30,9 +30,8 @@ if (isset($_POST['submit'])) {
     'type' => $type
   );
   
-  // var_dump($new_values);
   $result = $db->update($edited_values, $id);
-  //var_dump($result);
+  $_SESSION['status'] = "Updated Successfully";
   header('location:user_show.php');
 }
 
