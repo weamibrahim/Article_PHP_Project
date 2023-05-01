@@ -2,13 +2,13 @@
 session_start();
 require_once('../includes/header.php');
 require_once('../includes/sidebar.php');
+require_once('../includes/topbar.php');
 ?>
 
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
+<div class="content-wrapper" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           
@@ -19,7 +19,7 @@ require_once('../includes/sidebar.php');
     <canvas id="myChart" width="60" height="40"></canvas>
     <?php
 include('../../config/dbcon.php');
-$sql = "SELECT g.name, COUNT(u.id) as num_users 
+$sql = "SELECT g.name, COUNT(u.id) as num_users, u.type as type
         FROM groups g 
         LEFT JOIN users u ON u.groupid = g.id 
         GROUP BY g.name";
@@ -29,7 +29,7 @@ $labels = array();
 $data = array();
 
 foreach ($results as $row) {
-    $labels[] = $row['name'];
+    $labels[] = $row['type'];
     $data[] = $row['num_users'];
 }
 
@@ -72,6 +72,7 @@ $data = array(
     </div>
     <!-- /.content-header -->
 </div>
+
 
   
 <?php
