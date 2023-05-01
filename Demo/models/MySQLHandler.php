@@ -1,7 +1,11 @@
 <?php
+
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
  class MySQLHandler implements DbHandler{
 
-
+    private $_log;
+    private $path="../../";
    private $_db_handler;
    private $_table;
    protected $_primary_key = 'id';
@@ -9,21 +13,28 @@
    {
 
        $this->_table=$table;
+       $this->_log = new Logger('exceptions');
+       $this->_log->pushHandler(new StreamHandler($this->path.'exceptions.log', Logger::DEBUG));
        $this->connect();
     }
 
 
   public function connect(){
 
-
+       try{
          $handler=mysqli_connect(__HOST__,__USER__,__PASS__,__DB__,"3307");
-         //    var_dump($handler);
             if(!$handler)
             {   return false;
               
             }
             $this->_db_handler=$handler;
             return true;
+        }
+        catch(Exception $e)
+        {
+            $this->_log->error($e->getMessage(), ['exception' => $e]);
+            die('Something went wrong, Please comeback later');
+        }
          
     }
  

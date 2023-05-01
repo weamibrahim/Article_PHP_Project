@@ -6,6 +6,7 @@ include('../includes/sidebar.php');
 require_once("../../vendor/autoload.php");
 $db = new MySQLHandler("users");
 $items = $db->get_all_record_paginated(array(), 0);
+
 ?>
 
 

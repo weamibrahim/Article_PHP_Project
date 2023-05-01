@@ -1,6 +1,7 @@
 {
     "require":{
-
+        "monolog/monolog": "^3.3",
+        "psr/log": "^3.0"
     },
     "autoload":{
         "classmap":["models"],
