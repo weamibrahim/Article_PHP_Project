@@ -17,13 +17,13 @@ require_once("../../vendor/autoload.php");
 <div class="container">
     <form class=" mt-5 " method="post" class="container" enctype="multipart/form-data">
     <div class="shadow p-3 mb-5 mt-4  rounded-4 container ">
-        <p class="text-center fs-1 fst-italic" style="color: #BC8CE9; text-shadow: 1px 2px #A8BBC9; margin-top: -50px">Search Group</p>
+        <p class="text-center fs-1 fst-italic" style="color: #BC8CE9; text-shadow: 1px 2px #A8BBC9; margin-top: -50px">Search user</p>
         <div class="form-group">
-            <input type="text" class="form-control" id="name" name="name" placeholder="Search by name or description">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Search by name or group">
         </div>
     </div>
     <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-info" name="search_by_name_desc" style="background-color: #B988E9; border-color: #B988E9; color:white">Search by name or description</button>
+        <button type="submit" class="btn btn-info" name="search_by_name_desc" style="background-color: #B988E9; border-color: #B988E9; color:white">Search by name or group</button>
     </div>
     </form>
     <?php
