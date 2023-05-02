@@ -13,7 +13,7 @@ if($result){
 }
    
 else{ 
-  $_SESSION['status'] = "Cannot delete: the users has transactions";
+  $_SESSION['status'] = "Cannot delete: the users has articles";
   header('location:user_show.php');
 }
  }
