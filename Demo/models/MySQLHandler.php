@@ -160,13 +160,31 @@ public function search($column, $column_value,$column2, $column2_value){
 }
 
 
+
  public function delete($id) {
     $table = $this->_table;
    $primary_key =$this->_primary_key;
 
-   $sql = "DELETE FROM `" . $table . "` WHERE `" . $primary_key . "` = " . $id;
-
+    // Check if user has associated articles
+    $articles_table = "articles";
+    $articles_count_sql = "SELECT COUNT(*) as article_count FROM `$articles_table` WHERE `user_id` = $id";
+    $articles_count = $this->getResult($articles_count_sql);
+    if (!$articles_count || $articles_count[0]['article_count'] > 0) {
+        echo "User has associated articles, can't delete";
+        return false;
+    }
   
+    // check if the group has associated users
+    $sql = "SELECT COUNT(*) FROM `users` WHERE `groupId` = $id";
+    $result = $this->getResult($sql);
+    if ($result[0]['count(*)'] > 0) {
+        // display alert message and prevent the group from being deleted
+        echo "Cannot delete the group as it has associated users.";
+        return false;
+    }
+
+    // delete the group if it doesn't have associated users
+    $sql = "DELETE FROM `" . $table . "` WHERE `" . $primary_key . "` = " . $id;
     if (mysqli_query($this->_db_handler, $sql)) {
         $this->disconnect();
         return true;
@@ -174,7 +192,6 @@ public function search($column, $column_value,$column2, $column2_value){
         $this->disconnect();
         return false;
     }
-    
 }
 
 
