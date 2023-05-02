@@ -8,7 +8,7 @@ if(isset($_GET['deleteId'])){
     $id=$_GET['deleteId'];
     $result =$db->delete($id);
 if($result){
-  $_SESSION['Delete'] = "Deleted Successfully";
+  $_SESSION['delete'] = "Deleted Successfully";
    header('location:show.php');
 }
    
