@@ -37,7 +37,7 @@
     <li class="nav-item">
           <a href="../../../../Article_PHP_Project/Demo/views/home/index.php" class="nav-link">
           <img src="../../assets/dist/img/home.png" class="nav-icon" style="width: 27px; margin-bottom: 10px">
-            <p style="font-size: 18px; margin-left: 6px; color:white">
+            <p style="font-size: 18px; margin-left: 6px;">
               Home
             </p>
           </a>

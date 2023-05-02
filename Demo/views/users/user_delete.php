@@ -8,12 +8,12 @@ if(isset($_GET['deleteId'])){
     $id=$_GET['deleteId'];
     $result =$db->delete($id);
 if($result){
-  $_SESSION['status'] = "Deleted Successfully";
+  $_SESSION['delete'] = "Deleted Successfully";
    header('location:user_show.php');
 }
    
 else{ 
-  $_SESSION['status'] = "Cannot delete: the users has articles";
+  $_SESSION['warn'] = "Cannot delete: the users has articles";
   header('location:user_show.php');
 }
  }
