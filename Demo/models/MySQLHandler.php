@@ -160,6 +160,7 @@ public function search($column, $column_value,$column2, $column2_value){
 }
 
 
+
  public function delete($id) {
     $table = $this->_table;
    $primary_key =$this->_primary_key;
