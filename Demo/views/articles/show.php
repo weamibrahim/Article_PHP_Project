@@ -84,10 +84,8 @@ foreach ($items as $item) {
     <td> ' . $user_names[$item["user_id"]].'</td>
    
   <td>
-   
-   <a class="btn btn-danger"  href="delete.php?deleteId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td></tr>';
-       
-  }
+   <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >delete group</a></button></td></tr>';
+      }
       ?>
     </tbody>
   </table>

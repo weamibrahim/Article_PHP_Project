@@ -45,12 +45,10 @@ $items = $db->get_all_record_paginated(array(), 0);
 
   <td> <a class="text-decoration-none" style="color: #BC8CE9"  href="users.php?userId=' . $item["id"] .'">' .$item["name"].'</td>
     <td>' . $item["description"] . '</td>
-    <td>          
-    <a class="btn btn-danger"  href="delete.php?deleteId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-     <a class="btn btn-info" style="margin-left:20px" href="update.php?updateId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fa fa-edit "></i> </a>
-    </td></tr>'; 
-   }
-
+    
+     <td><button class="btn " style="background-color:#D3B2B7"><a  class="text-decoration-none text-black" href="update.php?updateId=' . $item["id"] . '" >Update Group</a></button>
+   <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >Delete Group</a></button></td></tr>';
+      }
       ?>
 
 

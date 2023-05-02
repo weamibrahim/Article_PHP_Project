@@ -59,10 +59,8 @@ foreach($groups as $group) {
    <td> ' . $group_names[$item["groupid"]].'</td>
    <td>'  .$item["type"]   . '</td>  
    
-     <td>          
-     <a class="btn btn-danger"  href="user_delete.php?deleteId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
-      <a class="btn btn-info" style="margin-left:20px" href="user_update.php?updateId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fa fa-edit "></i> </a>
-     </td></tr>'; 
+     <td><button class="btn " style="background-color:#D3B2B7"><a class="text-decoration-none text-black"href="user_update.php?updateId=' . $item["id"] . '" >Update User</a></button>
+     <button class="btn btn-danger"><a class="text-decoration-none text-black"  class="text-decoration-non text-black" href="user_delete.php?deleteId=' . $item["id"] . '" >Delete User</a></button></td></tr>';
     }
       ?>
     </tbody> 
