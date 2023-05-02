@@ -164,15 +164,6 @@ public function search($column, $column_value,$column2, $column2_value){
     $table = $this->_table;
    $primary_key =$this->_primary_key;
 
-    //   // check if the group has associated users
-    //   $sql = "SELECT COUNT(*) FROM `articles` WHERE `group_id` = $id";
-    //   $result = $this->getResult($sql);
-    //   if ($result[0]['count(*)'] > 0) {
-    //       // display alert message and prevent the group from being deleted
-    //       echo "Cannot delete the user as it has associated articles.";
-    //       return false;
-    //   }
-    
     // Check if user has associated articles
     $articles_table = "articles";
     $articles_count_sql = "SELECT COUNT(*) as article_count FROM `$articles_table` WHERE `user_id` = $id";
