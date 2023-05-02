@@ -60,7 +60,6 @@ foreach($groups as $group) {
    <td>'  .$item["type"]   . '</td>  
    
      <td><button class="btn " style="background-color:#D3B2B7"><a class="text-decoration-none text-black"href="user_update.php?updateId=' . $item["id"] . '" >Update User</a></button>
-
      <button class="btn btn-danger"><a class="text-decoration-none text-black"  class="text-decoration-non text-black" href="user_delete.php?deleteId=' . $item["id"] . '" >Delete User</a></button></td></tr>';
     }
       ?>
