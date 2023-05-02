@@ -13,7 +13,7 @@ if($result){
 }
    
 else{ 
-  $_SESSION['status'] = "Cannot delete: the group has transactions";
+  $_SESSION['status'] = "Cannot delete: the group has users";
   header('location:show.php');
 }
  }
