@@ -18,9 +18,9 @@ if(isset($_SESSION["logged"]) ==true) {
   }
 }
 else{
-  $_message = "you are not allowed to see this page" ;
-  header('Location: ../home/index.php? message='.urldecode($_message));
-  exit;
+  // $_message = "you are not allowed to see this page" ;
+  // header('Location: ../home/index.php? message='.urldecode($_message));
+  // exit;
 }
 
 require_once('../includes/header.php');
@@ -85,8 +85,9 @@ foreach ($items as $item) {
    
   <td>
    
-   <button class="btn btn-danger"><a   class="text-decoration-none text-black" href="delete.php?deleteId=' . $item["id"] . '" >delete group</a></button></td></tr>';
-      }
+   <a class="btn btn-danger"  href="delete.php?deleteId=' . $item["id"] . '"class="text-decoration-none" "class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td></tr>';
+       
+  }
       ?>
     </tbody>
   </table>
