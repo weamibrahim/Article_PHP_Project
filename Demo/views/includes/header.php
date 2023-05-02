@@ -39,6 +39,7 @@
 <script src="../../assets/js/plugins/sweetalert.min.js"></script>
 <script src="../../assets/dist/js/sweetalert.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <!-- <script>
   swal({
   title: "Good job!",

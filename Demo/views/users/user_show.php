@@ -63,7 +63,7 @@ foreach($groups as $group) {
      <button class="btn btn-danger"><a class="text-decoration-none text-black"  class="text-decoration-non text-black" href="user_delete.php?deleteId=' . $item["id"] . '" >Delete User</a></button></td></tr>';
     }
       ?>
-    </tbody>
+    </tbody> 
   </table>
 </div>
       

@@ -18,9 +18,9 @@ if(isset($_SESSION["logged"]) ==true) {
   }
 }
 else{
-  $_message = "you are not allowed to see this page" ;
-  header('Location: ../home/index.php? message='.urldecode($_message));
-  exit;
+  // $_message = "you are not allowed to see this page" ;
+  // header('Location: ../home/index.php? message='.urldecode($_message));
+  // exit;
 }
 
 require_once('../includes/header.php');
