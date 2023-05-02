@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
   $image = $_FILES['icon']["tmp_name"];
 
   if (!empty($_FILES)) {
-    //var_dump($_FILES);
+
     $file_name = $_FILES['icon']["name"];
     move_uploaded_file($image, "../../uploads/$file_name");
   }

@@ -73,7 +73,6 @@
           </a>
         </li>
 
-
         <!-- chartss menu -->
         <li class="nav-item">
           <a href="../../../../Article_PHP_Project/Demo/views/charts/chart.php" class="nav-link">
