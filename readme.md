@@ -2,13 +2,20 @@
 
 > Project for 9 months course in iti
 
-<h3 align="center">The website allows users to create, read, update and delete articles based on their assigned roles.</h3>
+<h3 align="center">It is a simple PHP-based football blog management system. Our website is roles driven providing different level of access to different user groups. We have two main roles, admins and editors, each of which is assigned different permissions to create, read, and delete articles on system.</h3>
 
-<p><strong>Login Page:</strong> Users can log in with their username and password.<p>
-<p><strong>Home Page: </strong> The home page includes a sidebar or top bar navigation with the following items: Groups, Users, Articles, and Logout.<p>
-<p><strong>Groups Page:</strong>  Admin can add, edit, and delete a group. Each group has a Font Awesome icon, name, and description. This page has a table for existing groups and a form to add new groups or edit existing ones. Users can search for a group by name or description.<p>
-<p><strong>Users Page:</strong>  Admin can add, edit, and delete users. Each user has a name, email, mobile number, username, password, and a group (each user can belong to one group). This page has a table for existing users and a form to add new users or edit existing ones. Users can filter users by group and search for a user by name.<p>
-<p><strong>Articles Page:</strong>  This page is accessible only to Admins and Editors. An article has a title, summary, image, full article, and publishing date. This page has a table for existing articles and a form to add new articles. Articles cannot be edited.<p>
+
+**Our Features**
+
+- Responsive design for mobile and desktop devices.
+- Group creation, editing, reading and deletion.
+- User creation, editing, reading and deletion.
+- Article creation, reading and deletion.
+- Request error and exception logging.
+- Role-based access control.
+- Search and filtering.
+- User profile.
+
 
 **Technologies**
 
