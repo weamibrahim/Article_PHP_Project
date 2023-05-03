@@ -1,6 +1,6 @@
 # Article_PHP_Project
 
-file:///C:/Users/Kimo%20Store/Downloads/Article%20(1).gif
+![Article](https://user-images.githubusercontent.com/112786733/236065656-35d6d7c0-4ec7-4e4b-8720-5d9f04aae50e.jpg)
 
 > Project for 9 months course in iti
 
