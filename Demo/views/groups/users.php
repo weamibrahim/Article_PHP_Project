@@ -6,11 +6,8 @@ require_once("../../vendor/autoload.php");
 
 $db = new MySQLHandler("users");
 $id = $_GET['userId'];
-//var_dump($id);
 
 $items = $db->get_all_record_paginated(array(), 0);
-
-//var_dump($items)
 ?>
 
 

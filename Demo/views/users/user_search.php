@@ -51,17 +51,17 @@ require_once("../../vendor/autoload.php");
 
             <thead class="table-dark text-center">
                 <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">userName</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">name</th>
+                    <th scope="col" style="background-color:#D3B2B7" >Id</th>
+                    <th scope="col" style="background-color:#D3B2B7">userName</th>
+                    <th scope="col" style="background-color:#D3B2B7">Email</th>
+                    <th scope="col" style="background-color:#D3B2B7">name</th>
               
-                    <th scope="col">group name</th>
-                    <th scope="col">type</th>
+                    <th scope="col" style="background-color:#D3B2B7">group name</th>
+                    <th scope="col" style="background-color:#D3B2B7">type</th>
                 </tr>
             </thead>
 
-            <tbody class="text-center">
+            <tbody class="text-center" style="color: white;">
 
 
                 <?php
@@ -73,23 +73,17 @@ require_once("../../vendor/autoload.php");
 
                 ?>
 
+            <tr >
 
-
-
-
-
-
-                        <tr>
-
-                            <td><?php echo $result['id'] ?></td>
+                            <td style="color: white;"><?php echo $result['id'] ?></td>
                             <!-- $result['icon'] -->
 
-                            <td><?php echo $result['username'] ?></td>
-                            <td><?php echo $result['email'] ?></td>
-                            <td><?php echo $result['name'] ?></td>
+                            <td style="color: white;"><?php echo $result['username'] ?></td>
+                            <td style="color: white;"><?php echo $result['email'] ?></td>
+                            <td style="color: white;"><?php echo $result['name'] ?></td>
                            
-                            <td><?php echo $group_names[$result['groupid']] ?></td>
-                            <td><?php echo $result['type'] ?></td>
+                            <td style="color: white;"><?php echo $group_names[$result['groupid']] ?></td>
+                            <td style="color: white;"><?php echo $result['type'] ?></td>
 
 
                         </tr>

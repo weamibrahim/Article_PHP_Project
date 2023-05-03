@@ -46,6 +46,9 @@ require_once('../includes/sidebar.php');
       <div class="container-fluid">
 <div class="container">
   <div class="d-flex ">
+    <!-- <?php
+    var_dump($_SESSION['auth_user']['user_role']);
+    ?> -->
   <button class=" btn btn-info mt-5 " style="background-color: #8487C0; border-color: #8487C0; ">
     <a  class="text-decoration-none text-white "  href="./create.php">New Article <article></article></a>
   </button>
