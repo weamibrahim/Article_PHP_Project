@@ -3,6 +3,12 @@ session_start();
 
 require_once("../../vendor/autoload.php");
 
+// if(isset($_SESSION['type']) && $_SESSION['type']!='admin'){
+//  header ('location:artisals.php') ;
+//  die();
+// }
+
+
 // //permission
 // if(isset($_SESSION["logged"]) ==true) {
 //   if ($_SESSION['type'] == 'admin') {

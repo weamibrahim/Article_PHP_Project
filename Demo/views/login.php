@@ -12,6 +12,44 @@ include('../config/dbcon.php');
 if (isset($_SESSION['auth'])) {
   header('Location: ../views/home/index.php');
 }
+
+
+
+
+
+
+$error='"';
+if (isset ($_POST['submit'])){
+
+$username=$_POST['username'];
+$password=$_POST['password'];
+$sql="select * from admin_user where username='$username' and password='$password'";
+$res=mysqli_query($con, $sql) ;
+$count=mysqli_num_rows ($res) ;
+
+ if ($count>0) {
+
+$row=mysqli_fetch_assoc($res) ;
+var_dump($_row);
+$_SESSION['type']=$row['type'];
+
+
+$_SESSION['IS_LOGIN']="yes";
+
+if($row['type']=='admin' || $row['type']=='editor') {
+header ('location:show.php') ;
+ }
+ else {
+  header ('location:index.php') ;
+   }
+   
+}
+else{
+  $error = 'please enter correctly' ;
+   }
+
+  } 
+
 ?> 
 
 

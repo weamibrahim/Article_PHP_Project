@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
   $groupid = $_POST['groupid'];
   $type = $_POST['type'];
-  //var_dump($name);
+
 
   $new_values = array(
 

@@ -1,3 +1,5 @@
+
+
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-image: url(../../assets/dist/img/peakpx\ \(17\).jpg); background-repeat: no-repeat; height: 100%; background-size: cover">
     <!-- Brand Logo -->
@@ -14,6 +16,8 @@
         <!-- <p style="color:white; display:inline ">User Name:</p> -->
         <img src="../../assets/dist/img/user (1).png">
         <span style="color:white; font-size:20px; margin-left:5px">
+        
+
         <?php  
                //session_start();
               if(isset($_SESSION['auth'])){
@@ -62,18 +66,31 @@
           </a>
         </li>
         
-
+      
         <!-- articles menu -->
-        <li class="nav-item">
-          <a href="../../../../Article_PHP_Project/Demo/views/articles/show.php" class="nav-link">
+        <li class="nav-item" id="article">
+        <a href="../../../../Article_PHP_Project/Demo/views/articles/show.php" class="nav-link">
           <img src="../../assets/dist/img/content-writing.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
             <p style="font-size: 18px; margin-left: 6px; color:white">
               Articles
             </p>
           </a>
         </li>
+        
 
-        <!-- chartss menu -->
+
+
+        <!-- profile menu -->
+        <li class="nav-item">
+          <a href="../../../../Article_PHP_Project/Demo/views/users/profile.php" class="nav-link">
+          <img src="../../assets/dist/img/profile (1).png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
+            <p style="font-size: 18px; margin-left: 6px; color:white">
+              Profile
+            </p>
+          </a>
+        </li>
+
+        <!-- charts menu -->
         <li class="nav-item">
           <a href="../../../../Article_PHP_Project/Demo/views/charts/chart.php" class="nav-link">
           <img src="../../assets/dist/img/bar-graph.png" class="nav-icon" style="width: 30px; margin-bottom: 10px">
@@ -98,3 +115,4 @@
   </div>
   <!-- /.sidebar -->
   </aside>
+  

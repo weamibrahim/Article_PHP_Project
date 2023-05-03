@@ -15,9 +15,8 @@ if($result){
 else{ 
     die ( mysqli_connect_error());
 }
-   
 
  }
- 
+
 
 ?>

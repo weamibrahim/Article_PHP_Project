@@ -5,6 +5,11 @@ if (empty($_SESSION['auth'])) {
   header('Location: ../login.php');
 }
 
+// if (isset ($_SESSION[ 'type']) && $_SESSION[ 'type']!='admin'){
+//   header('location:artisals.php');
+//    die();
+// }
+
 include('../includes/header.php');
 include('../includes/topbar.php');
 include('../includes/sidebar.php');

@@ -34,17 +34,10 @@
               ?> 
 
             </button> 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 10px;">
-              <ul style="list-style: none; width: 10px;" >
-                <li>
-                <form action="../../../../Article_PHP_Project/Demo/views/logout.php" method="POST">
-                <button type="submit" name="logout" class="dropdown-item">Logout</button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <form action="../../../../Article_PHP_Project/Demo/views/logout.php"  method="POST">
+                <button type="submit" style="width: 10px;" name="logout" class="dropdown-item">Logout</button>
               </form>
-                </li>
-                <li>
-                  <a href="../users/profile.php" style="text-decoration: none;"><button type="submit" name="logout" class="dropdown-item">Profile</button></a>
-                </li>
-              </ul>
             </div>
           </div>
        </li>

@@ -1,9 +1,17 @@
 <?php
 session_start();
-
-
 require_once("../../vendor/autoload.php");
-
+$dbs = new MySQLHandler("groups");
+$db = new MySQLHandler("users");
+$groups = $dbs->get_all_record_paginated(array(), 0);
+if(isset($_SESSION['auth'])) {
+    $sql = $_SESSION['auth_user']['user_group'];
+    
+foreach($groups as $group) {
+    if($sql == $group["id"])
+    $group_names = $group["name"];
+  } 
+}
 
 include('../includes/header.php');
 include('../includes/topbar.php');
@@ -36,6 +44,8 @@ include('../includes/sidebar.php');
                 echo "Not Logged in";
               }
               ?> </h2>
+
+
             <h3 style="color: #060C1E;">Member in <span style="color: #BC8CE9;"><?php  echo $_SESSION['auth_user']['user_role'];  ?></span></h3>
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
@@ -43,8 +53,10 @@ include('../includes/sidebar.php');
                 <h5 style="color: white"><?php  echo $_SESSION['auth_user']['user_email'];  ?></h5>
               </div>
               <div class="px-3" style="color: #060C1E;">
-              <h1 class="mb-2 h5" style="color: #060C1E;">Phone</h1>
-              <h5 style="color: white">0128388436</h5>              
+              <h1 class="mb-2 h5" style="color: #060C1E;">Group</h1>
+              <h5 style="color: white"><?php if(isset($groups[0]['name'])): ?>
+      <p><?php echo $group_names?></p>
+    <?php endif; ?></h5>              
             </div>
             </div>
           </div>

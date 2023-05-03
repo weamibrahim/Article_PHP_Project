@@ -22,7 +22,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
             $user_name = $row['userName'];
             $user_email = $row['Email'];
             $user_role = $row['type'];
-            //$user_group = $row['groupId'];
+            $user_group = $row['groupId'];
         }
         $_SESSION['auth'] = true;
         $_SESSION['auth_user'] = [
@@ -30,7 +30,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
             'user_name' => $user_name,
             'user_email' => $user_email,
             'user_role' => $user_role,
-            //'user_group' => $user_group
+            'user_group' => $user_group
         ];
         //Remember me
         if(isset($_POST['remember_me'])){
