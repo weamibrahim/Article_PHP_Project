@@ -1,5 +1,7 @@
 # Article_PHP_Project
 
+file:///C:/Users/Kimo%20Store/Downloads/Article%20(1).gif
+
 > Project for 9 months course in iti
 
 <h3 align="center">The website allows users to create, read, update and delete articles based on their assigned roles.</h3>
