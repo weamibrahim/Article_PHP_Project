@@ -6,13 +6,23 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav" style="margin-left: 400px;"> 
+    <ul class="navbar-nav " style="margin-left: 400px;"> 
     <li class="nav-item">
    
 
       </li>
      
     </ul>
+
+
+
+
+    <ul class="navbar-nav ml-3">
+      <li nav-item>
+          <img src="../../assets/dist/img/Article (2).gif" width="100px" height="60px">
+       </li>
+      
+    </ul> 
 
     
     <!-- Right navbar links -->
