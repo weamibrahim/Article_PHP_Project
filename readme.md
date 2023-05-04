@@ -1,7 +1,7 @@
 # Article_PHP_Project
-
+<div align="center">
 ![Article](https://user-images.githubusercontent.com/112786733/236065656-35d6d7c0-4ec7-4e4b-8720-5d9f04aae50e.jpg)
-
+</div>
 > Project for 9 months course in iti
 
 <h3 align="center">The website allows users to create, read, update and delete articles based on their assigned roles.</h3>
