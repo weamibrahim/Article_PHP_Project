@@ -1,8 +1,5 @@
 # Article_PHP_Project
-<div align="center">
-![Article](https://user-images.githubusercontent.com/112786733/236076934-385ce5b1-f80c-4a30-925b-e8705ee156da.gif)
 
-</div>
 > Project for 9 months course in iti
 
 <h3 align="center">The website allows users to create, read, update and delete articles based on their assigned roles.</h3>
@@ -25,7 +22,7 @@
 
 **Recordit**
 
-![Recordit GIF](http://)
+![Recordit GIF](https://user-images.githubusercontent.com/112786733/236077335-acb942e3-25a2-414d-b6e4-508c252e9fe5.mp4)
 
 ## Installation
 - Clone this repo to your local machine using `https://github.com/weamibrahim/Article_PHP_Project`
