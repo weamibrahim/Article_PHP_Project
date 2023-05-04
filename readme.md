@@ -9,6 +9,12 @@
 <p><strong>Groups Page:</strong>  Admin can add, edit, and delete a group. Each group has a Font Awesome icon, name, and description. This page has a table for existing groups and a form to add new groups or edit existing ones. Users can search for a group by name or description.<p>
 <p><strong>Users Page:</strong>  Admin can add, edit, and delete users. Each user has a name, email, mobile number, username, password, and a group (each user can belong to one group). This page has a table for existing users and a form to add new users or edit existing ones. Users can filter users by group and search for a user by name.<p>
 <p><strong>Articles Page:</strong>  This page is accessible only to Admins and Editors. An article has a title, summary, image, full article, and publishing date. This page has a table for existing articles and a form to add new articles. Articles cannot be edited.<p>
+  
+
+**Demo**
+
+![Recordit GIF](https://user-images.githubusercontent.com/112786733/236077335-acb942e3-25a2-414d-b6e4-508c252e9fe5.mp4)
+ 
 
 **Technologies**
 
@@ -18,11 +24,28 @@
 - JS
 - CSS
 - HTML
+  
+**Packages**
+ - Chart.js
 
-
-**Recordit**
-
-![Recordit GIF](https://user-images.githubusercontent.com/112786733/236077335-acb942e3-25a2-414d-b6e4-508c252e9fe5.mp4)
+ 
+ **Features**
+  
+  - User authentication and Remember me option.
+  - Role-based access control.
+  - Article creation and deletion.
+  - User creation, editting and deletion.
+  - Group creation, editting and deletion.
+  - Search by name or group.
+  - User profile.
+  - Chart statistics and analysis.
+  - Error and exception logging
+  
+ ** Roles**
+  - Admin ---> Full access.
+  - Editor ---> Full access.
+  - User ---> View his profile.
+  
 
 ## Installation
 - Clone this repo to your local machine using `https://github.com/weamibrahim/Article_PHP_Project`
