@@ -11,12 +11,12 @@
 <p><strong>Articles Page:</strong>  This page is accessible only to Admins and Editors. An article has a title, summary, image, full article, and publishing date. This page has a table for existing articles and a form to add new articles. Articles cannot be edited.<p>
   
 
-**Demo**
+## Demo
 
-![Recordit GIF](https://user-images.githubusercontent.com/112786733/236077335-acb942e3-25a2-414d-b6e4-508c252e9fe5.mp4)
+(https://user-images.githubusercontent.com/112786733/236077335-acb942e3-25a2-414d-b6e4-508c252e9fe5.mp4)
  
 
-**Technologies**
+## Technologies
 
 - PHP
 - MySQL
@@ -25,11 +25,11 @@
 - CSS
 - HTML
   
-**Packages**
+## Packages
  - Chart.js
 
  
- **Features**
+ ## Features
   
   - User authentication and Remember me option.
   - Role-based access control.
@@ -41,7 +41,7 @@
   - Chart statistics and analysis.
   - Error and exception logging
   
- ** Roles**
+ ## Roles
   - Admin ---> Full access.
   - Editor ---> Full access.
   - User ---> View his profile.
