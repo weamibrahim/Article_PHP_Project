@@ -17,7 +17,7 @@
   public function connect(){
 
 
-         $handler=mysqli_connect(__HOST__,__USER__,__PASS__,__DB__,__PORT__);
+         $handler=mysqli_connect(__HOST__,__USER__,__PASS__,__DB__,);
          //    var_dump($handler);
             if(!$handler)
             {   return false;
