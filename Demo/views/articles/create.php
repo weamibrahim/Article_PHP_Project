@@ -1,12 +1,16 @@
 <?php
 session_start();
 require_once("../../vendor/autoload.php");
+require_once ('./article_validatiion.php');
+require_once '../../config/validation.php';
+
 
 $db = new MySQLHandler("articles");
+$error_title=$error_summary=$error_article=$error_message="";
 
 if (isset($_POST['submit'])) {
 
-
+  
   $title = $_POST['title'];
   $summary = $_POST['summary'];
   $image = $_FILES['image']["tmp_name"];
@@ -18,7 +22,16 @@ if (isset($_POST['submit'])) {
   $full_article = $_POST['full_article'];
   $user_id = $_POST['user_id'];
 
+   
+if (empty($_POST['title']) || empty($_POST['summary']) || empty($_POST['full_article']) || empty($_POST['user_id']) || empty($_POST['image'])) {
+  $error_message = "All fields are required";
+}
 
+$error_title = validateTitle( $title);
+$error_summary = validateSummary($summary);
+//$error_article = validateArticle($file_name);
+if ($error_title == "" && $error_message == "" && $error_summary == "") {
+   
   $new_values = array(
    
     'title' =>  $title,
@@ -30,6 +43,7 @@ if (isset($_POST['submit'])) {
   $result = $db->save($new_values);
   $_SESSION['status'] = "Created Successfully";
   header('location:show.php');
+}
 }
 
 include('../includes/header.php');
@@ -51,15 +65,28 @@ require_once('../includes/sidebar.php');
       <label for="title" class="form-label">Title</label>
       <input type="text" class="form-control   rounded-end" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" required id="title" name="title">
     </div>
+    <?php  if(isset($error_title)){
+                echo " <h5 style='color: red; margin-left:50px'>$error_title</h5>";
+            }  ?>
+        
 
     <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">
       <label for="summary" class="form-label">Summary</label>
       <input type="text" class="form-control rounded-end" required style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" id="name" name="summary">
     </div>
+    <?php  if(isset($error_summary)){
+                echo " <h5 style='color: red; margin-left:50px'>$error_summary</h5>";
+            }  ?>
+        
+
     <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">
       <label for="full_article" class="form-label">Full Article</label>
       <input type="text" class="form-control  rounded-end" required id="full_article" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" name="full_article">
     </div>
+    <?php  if(isset($error_article)){
+                echo " <h5 style='color: red; margin-left:50px'>$error_article</h5>";
+            }  ?>
+        
     <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">
       <label for="image" class="form-label">Image</label>
       
@@ -69,7 +96,7 @@ require_once('../includes/sidebar.php');
     <div class="mb-3 mx-5  " style="color: #BC8CE9; font-size: 20px;">
       <label for="user_id" class="form-label">User Name</label>
       <select  class="form-control   rounded-end" id="user_id" style="background-color: rgba(0, 0, 0, 0.1); border-color: #B988E9; color:white" name="user_id">
-
+        
       <?php 
       $dbs = new MySQLHandler("users");
       $users = $dbs->get_all_record_paginated(array(), 0);
