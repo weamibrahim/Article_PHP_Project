@@ -1,7 +1,4 @@
 <?php
-define("HOST","localhost");
-define("USER","root");
-
 define("MIN_LENGTH",3);
 define("MAX_LENGTH",20);
 

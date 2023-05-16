@@ -24,7 +24,7 @@ if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['password'])
 }
 
 $error_name = validateName($name);
-$error_email = validateEmail($email, $db);
+$error_email = validateEmail($email);
 $error_password = validatePassword($password);
 $error_username = validateUsername($username);
 if ($error_name == "" && $error_message == "" && $error_email == "" && $error_password == "" && $error_username == "") {
